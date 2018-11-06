@@ -16,7 +16,7 @@ steps:
 - script: dotnet test '**/*Test/*.csproj' --logger trx --collect "Code coverage"
   displayName: 'Test execute'
   
-- task: PublishTestResult@2
+- task: PublishTestResults@2
   inputs:
     testRunner: VSTest
     testResultsFiles: '**/*.trx'
