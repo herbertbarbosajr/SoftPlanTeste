@@ -13,8 +13,10 @@ steps:
 - script: dotnet build --configuration $(buildConfiguration)
   displayName: 'dotnet build $(buildConfiguration)'
   
-- task: DotNetCoreCLI@2
+- script: dotnet test '**/*Test/*.csproj' --logger trx --collect "Code coverage"
+  displayName: 'Test execute'
+  
+- task: PublishTestResult
   inputs:
-    command: test
-    projects: '**/*Tests/*.csproj'
-    arguments: '--configuration $(buildConfiguration)'
+    testRunner: VSTest
+    testResultsFiles: '**/*.trx'
