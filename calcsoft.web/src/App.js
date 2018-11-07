@@ -1,32 +1,39 @@
 import React, { Component } from 'react';
 import './App.css';
-import { Button, TextField, Card, CardContent } from "@material-ui/core";
+import { Card, CardContent, CardHeader } from "@material-ui/core";
 import Navbar from './components/Navbar';
+import FormCalc from './components/FormCalc';
 
 class App extends Component {
+  state = {
+    edicao: true,
+  }
+
   render() {
+
+    const If = (props) => {
+      const condition = props.condition || false;
+      const positive = props.then || null;
+      const negative = props.else || null;
+      
+      return condition ? positive : negative;
+    };
+
     return (
       <div className="App">
         <Navbar />
         <header className="App-header">
-          <p>
-            Calculo de Juros, Softplan
-          </p>
-
           <Card>
+            <CardHeader title="Calculo de juros composto" />
             <CardContent>
-            <form noValidate autoComplete="off">
-              <TextField id="valorInicial"
-                        label="Valor Inicial"
-                        margin="normal"
-                        variant="outlined"/>
-            </form>
+              <If
+                condition= { this.state.edicao }
+                then={ <FormCalc /> }
+                else={ <div>Resultado</div>  }
+              />
+                          
             </CardContent>
-          </Card>        
-
-          <Button variant="contained" color="primary">
-            Teste
-          </Button>
+          </Card>      
         </header>
       </div>
     );
