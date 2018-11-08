@@ -13,10 +13,9 @@ addons:
     - libunwind8
     - zlib1g
 mono:
-  - 4.2.3
+  - 5.16.0
 os:
   - linux
-osx_image: xcode7.1
 branches:
   only:
     - master
