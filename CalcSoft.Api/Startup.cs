@@ -68,6 +68,12 @@ namespace CalcSoft.Api
                 su.RoutePrefix = "doc";
             });
 
+            app.UseCors(builder =>
+                builder.AllowAnyHeader()
+                .AllowAnyMethod()
+                .AllowAnyOrigin()
+                .AllowCredentials());
+
             app.UseMvc();
         }
     }

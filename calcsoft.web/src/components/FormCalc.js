@@ -6,7 +6,7 @@ import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
 import TextField from '@material-ui/core/TextField';
 import FormControl from '@material-ui/core/FormControl';
-import { Button } from '@material-ui/core';
+import { Button, CircularProgress } from '@material-ui/core';
 
 const styles = theme => ({
   formControl: {
@@ -14,6 +14,19 @@ const styles = theme => ({
   },
   buttonCalc: {
     marginTop: 10,
+  },
+  buttonProgress: {
+    //color: green[500],
+    position: 'absolute',
+    top: '50%',
+    left: '50%',
+    marginTop: -12,
+    marginLeft: -12,
+  },
+  buttonContent: {
+    margin: theme.spacing.unit,
+    position: 'relative',
+    alignItems: 'center',
   }
 });
 
@@ -40,9 +53,10 @@ NumberFormatCustom.propTypes = {
 };
 
 class FormCalc extends React.Component {
+ 
   state = {
     valorIncial: '0.00',
-    mes: '1',
+    mes: '0',
   };
 
   handleChange = name => event => {
@@ -51,7 +65,7 @@ class FormCalc extends React.Component {
     });
   };
 
-  render() {
+  render() {  
     const { classes } = this.props;
     const { valorIncial, mes } = this.state;
 
@@ -81,9 +95,17 @@ class FormCalc extends React.Component {
               inputComponent: NumberFormatCustom,
             }}
           />
-          <Button className={classes.buttonCalc} variant="outlined" color="primary">
-            Calcular
-          </Button> 
+          <div className={classes.buttonContent}>
+            <Button 
+              className={classes.buttonCalc} 
+              variant="outlined" 
+              color="primary"
+              disabled={this.props.process}
+              onClick={() => this.props.onCalcular(this.state.valorIncial, this.state.mes)}>
+              Calcular              
+            </Button>
+            {this.props.process && <CircularProgress size={24} className={classes.buttonProgress} />}
+          </div>
         </FormControl>               
       </div>
     );
