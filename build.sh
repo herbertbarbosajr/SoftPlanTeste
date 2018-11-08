@@ -13,7 +13,7 @@ dotnet restore
 
 dotnet test ./CalcSoft.Test/CalcSoft.Test.csproj -c Release
 
-dtonet build ./CalcSoft.Test/CalcSoft.Test.csproj -c Release
+dtonet build ./CalcSoft.Test/CalcSoft.Test.csproj -c Release -f net451
 
 mono \
   ./CalcSoft.Test/bin/Release/net451/*/dotnet-test-xunit.exe \
