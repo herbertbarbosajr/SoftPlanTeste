@@ -11,9 +11,9 @@ fi
 
 dotnet restore
 
-dotnet test ./CalcSoft.Test/CalcSoft.Test.csproj -c Release -f netcoreapp2.1
+dotnet test ./CalcSoft.Test/CalcSoft.Test.csproj -c Release
 
-dtonet build ./CalcSoft.Test/CalcSoft.Test.csproj -c Release -f net451
+dtonet build ./CalcSoft.Test/CalcSoft.Test.csproj -c Release
 
 mono \
   ./CalcSoft.Test/bin/Release/net451/*/dotnet-test-xunit.exe \
