@@ -1,25 +1,37 @@
-language: csharp
-sudo: required
-dist: trusty
-env:
-  - DOTNET_SKIP_FIRST_TIME_EXPERIENCE=true DOTNET_CLI_TELEMETRY_OPTOUT=true
-addons:
-  apt:
-    packages:
-    - gettext
-    - libcurl4-openssl-dev
-    - libicu-dev
-    - libssl-dev
-    - libunwind8
-    - zlib1g
-dotnet: 2.1.403
-mono: latest
-os:
-  - linux
-branches:
-  only:
-    - master
-before_install:
-  - chmod +x build.sh 
-script:
-  - ./build.sh  
+matrix:
+  include:
+  - language: csharp
+    sudo: required
+    dist: trusty
+    env:
+      - DOTNET_SKIP_FIRST_TIME_EXPERIENCE=true DOTNET_CLI_TELEMETRY_OPTOUT=true
+    addons:
+      apt:
+        packages:
+        - gettext
+        - libcurl4-openssl-dev
+        - libicu-dev
+        - libssl-dev
+        - libunwind8
+        - zlib1g
+    dotnet: 2.1.403
+    mono: latest
+    os:
+      - linux
+    branches:
+      only:
+        - master
+    before_install:
+      - chmod +x build.sh 
+    script:
+      - ./build.sh
+
+  - language: node_js
+    node_js:
+      - "stable"
+    cache:
+      directories:
+        - node_modules
+    script:
+      - npm test
+      - npm run build

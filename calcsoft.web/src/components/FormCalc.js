@@ -100,11 +100,11 @@ class FormCalc extends React.Component {
               className={classes.buttonCalc} 
               variant="outlined" 
               color="primary"
-              disabled={this.props.process}
+              disabled={this.props.isRequest}
               onClick={() => this.props.onCalcular(this.state.valorIncial, this.state.mes)}>
               Calcular              
             </Button>
-            {this.props.process && <CircularProgress size={24} className={classes.buttonProgress} />}
+            {this.props.isRequest && <CircularProgress size={24} className={classes.buttonProgress} />}
           </div>
         </FormControl>               
       </div>

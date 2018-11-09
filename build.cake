@@ -63,8 +63,14 @@ Task("BynaryPack")
     .IsDependentOn("Publish")
     .Does(() => 
     {
+        Information("Gerando aquivo zipado com os artefatos.");
+        
         var bynarys = GetFiles($"{artifactsDirectory}/**/*");
-        Zip("./", $"{bynarypackDirectory}/calcsoftApi.zip", bynarys);
+        Zip($"{artifactsDirectory}/", $"{bynarypackDirectory}/calcsoftApi.zip", bynarys);
+        
+        Information("Removendo artefatos apos gerar o pack.");
+        CleanDirectory(artifactsDirectory);
+        DeleteDirectory(artifactsDirectory, new DeleteDirectorySettings { Recursive = true, Force = true});
     }
 );
 

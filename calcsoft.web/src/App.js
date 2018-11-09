@@ -8,7 +8,7 @@ import swal from "@sweetalert/with-react";
 
 class App extends Component {
   state = {
-    process: false,
+    isRequest: false,
     edicao: true,
     resultado: 0.0,
     valorInicial: 0.0,
@@ -16,7 +16,7 @@ class App extends Component {
   }
 
   async callCalcApi(params) {
-    var url = new URL(process.env.URL_API + "/Juros/calculajuros");
+    var url = new URL(process.env.REACT_APP_URL_API + "/Juros/calculajuros");
     Object.keys(params).forEach(key => url.searchParams.append(key, params[key]))
     const response = await fetch(url);
     const body = await response.json();
@@ -38,21 +38,21 @@ class App extends Component {
   }
 
   onCalcular(valorInicial, mes){
-    if (!this.state.process){
+    if (!this.state.isRequest){
       if (!valorInicial || valorInicial <= 0.00){
         this.message("warning", 'Aviso', 'Informe um Valor Inicial maior que 0.00!');
         return;
       }
 
       if (!mes || mes <= 0){
-        this.message("warning", 'Aviso','Informe um mês maior que 0!');
+        this.message("warning", 'Aviso','Informe um valor maior que 0!');
         return;
       }
       
       var params = { valorInicial: valorInicial, meses: mes };
 
       this.setState({
-        process: true,
+        isRequest: true,
       });
 
       this.callCalcApi(params)
@@ -65,7 +65,7 @@ class App extends Component {
         })
         .finally(() =>{
           this.setState({
-            process: false,
+            isRequest: false,
           });
         });
     }
@@ -99,7 +99,7 @@ class App extends Component {
                 condition= { this.state.edicao }
                 then={ <FormCalc
                           onCalcular={this.onCalcular.bind(this)}
-                          process={this.state.process} /> }
+                          isRequest={this.state.isRequest} /> }
                 else={ <FormResult
                           result={this.state.resultado} 
                           onNovoCalculo={this.onNovoCalculo.bind(this)} />  }
