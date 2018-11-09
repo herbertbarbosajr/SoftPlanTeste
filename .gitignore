@@ -5,4 +5,7 @@
 /bin
 /.vs
 */obj
-/CalcSoft.Test/bin/Debug
+/CalcSoft.Test/bin/
+/tools
+/artifacts
+CalcSoft.Api/CalcSoft.Api.csproj.user
