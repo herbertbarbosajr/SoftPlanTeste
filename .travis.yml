@@ -1,6 +1,7 @@
 matrix:
   include:
   - language: csharp
+    stage: "Server Api"
     sudo: required
     dist: trusty
     env:
@@ -27,11 +28,13 @@ matrix:
       - ./build.sh
 
   - language: node_js
+    stage: "Web React"
     node_js:
       - "stable"
     cache:
       directories:
         - node_modules
     script:
+      - cd ./calcsoft.web
       - npm test
       - npm run build
