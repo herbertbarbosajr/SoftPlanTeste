@@ -12,7 +12,7 @@ addons:
     - libssl-dev
     - libunwind8
     - zlib1g
-dotnet: 2.1.0
+dotnet: 2.1.403
 mono: latest
 os:
   - linux
@@ -22,4 +22,9 @@ branches:
 before_install:
   - chmod +x build.sh 
 script:
-  - ./build.sh    
+  - ./build.sh
+deploy:
+      provider: releases
+      api_key: "GITHUB OAUTH TOKEN"
+      file: "./bynarypack/calcsoftApi.zip"
+      skip_cleanup: true   
