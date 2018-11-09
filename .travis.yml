@@ -1,5 +1,19 @@
 matrix:
   include:
+  - language: node_js
+    stage: "Web React"
+    group: "stable"
+    node_js:
+      - "stable"
+    cache:
+      directories:
+        - node_modules
+    before_script: cd ./calcsoft.web
+    script:
+      - npm install
+      - npm test
+      - npm run build
+
   - language: csharp
     stage: "Server Api"
     group: "stable"
@@ -27,16 +41,3 @@ matrix:
       - chmod +x build.sh 
     script:
       - ./build.sh
-
-  - language: node_js
-    stage: "Web React"
-    group: "stable"
-    node_js:
-      - "stable"
-    cache:
-      directories:
-        - node_modules
-    before_script: cd ./calcsoft.web
-    script:
-      - npm test
-      - npm run build
