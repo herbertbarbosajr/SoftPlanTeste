@@ -22,9 +22,4 @@ branches:
 before_install:
   - chmod +x build.sh 
 script:
-  - ./build.sh
-deploy:
-      provider: releases
-      api_key: "GITHUB OAUTH TOKEN"
-      file: "./bynarypack/calcsoftApi.zip"
-      skip_cleanup: true   
+  - ./build.sh  
