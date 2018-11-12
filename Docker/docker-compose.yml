@@ -1,0 +1,20 @@
+version: '3.5'
+
+services:
+  calcsoft-web:
+    container_name: calcsoft-web-prod
+    build:
+      context: ./webImage
+      dockerfile: Dockerfile
+    ports:
+      - '3000:80'
+    environment:
+      - REACT_APP_URL_API="http://localhost:8080"
+  
+  calcsoft-api:
+    container_name: calcsoft-api-prod
+    build:
+      context: ./apiImage
+      dockerfile: Dockerfile
+    ports:
+      - '8080:80'

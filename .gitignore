@@ -9,3 +9,4 @@
 /tools
 /artifacts
 CalcSoft.Api/CalcSoft.Api.csproj.user
+*.zip
