@@ -5,8 +5,8 @@
 
 **Acesso**
 
- - Api : [http://padlock.gestvendas.com:8080/](http://padlock.gestvendas.com:8080/)
- - Documentação Api (Swagger): [http://padlock.gestvendas.com:8080/doc](http://padlock.gestvendas.com:8080/doc)
+ - Api : [http://padlock.gestvendas.com:9090/](http://padlock.gestvendas.com:9090/)
+ - Documentação Api (Swagger): [http://padlock.gestvendas.com:9090/doc](http://padlock.gestvendas.com:9090/doc)
  - Cliente Web: [http://padlock.gestvendas.com:3000](http://padlock.gestvendas.com:3000)
 
 **Infraestrutura**
