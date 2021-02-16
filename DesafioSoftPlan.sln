@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30804.86
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DesafioSoftPlan.Api", "DesafioSoftPlan.Api\DesafioSoftPlan.Api.csproj", "{B4BD7AF7-40B6-4C3B-8BE9-C9E864CD530F}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DesafioSoftPlan.Test", "DesafioSoftPlan.Test\DesafioSoftPlan.Test.csproj", "{B865FC65-6D01-44E9-AD49-46479D1C373A}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DesafioSoftPlan.Api", "DesafioSoftPlan.Api\DesafioSoftPlan.Api.csproj", "{E6CEFCD3-0682-4F25-BB24-9D350FCB6216}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -13,14 +13,14 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{B4BD7AF7-40B6-4C3B-8BE9-C9E864CD530F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{B4BD7AF7-40B6-4C3B-8BE9-C9E864CD530F}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{B4BD7AF7-40B6-4C3B-8BE9-C9E864CD530F}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{B4BD7AF7-40B6-4C3B-8BE9-C9E864CD530F}.Release|Any CPU.Build.0 = Release|Any CPU
 		{B865FC65-6D01-44E9-AD49-46479D1C373A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{B865FC65-6D01-44E9-AD49-46479D1C373A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B865FC65-6D01-44E9-AD49-46479D1C373A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B865FC65-6D01-44E9-AD49-46479D1C373A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E6CEFCD3-0682-4F25-BB24-9D350FCB6216}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E6CEFCD3-0682-4F25-BB24-9D350FCB6216}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E6CEFCD3-0682-4F25-BB24-9D350FCB6216}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E6CEFCD3-0682-4F25-BB24-9D350FCB6216}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
