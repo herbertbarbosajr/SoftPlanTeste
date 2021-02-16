@@ -2,7 +2,7 @@ version: '3.5'
 
 services:
   calcsoft-web:
-    container_name: calcsoft-web-prod
+    container_name: desafiosoftplan-web-prod
     build:
       context: ./webImage
       dockerfile: Dockerfile
@@ -12,7 +12,7 @@ services:
       - REACT_APP_URL_API="http://localhost:8080"
   
   calcsoft-api:
-    container_name: calcsoft-api-prod
+    container_name: desafiosoftplan-api-prod
     build:
       context: ./apiImage
       dockerfile: Dockerfile
