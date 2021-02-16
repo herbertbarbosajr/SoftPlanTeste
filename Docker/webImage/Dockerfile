@@ -6,14 +6,14 @@ RUN apt-get update \
     && apt-get install unzip
 
 # Download artefatos
-RUN curl -s https://api.github.com/repos/pauloofmeta/calcsoft/releases/latest \
-  | grep "browser_download_url.*calcsoftWeb" \
+RUN curl -s https://api.github.com/repos/herbertbarbosajr/SoftPlanTeste/releases/latest \
+  | grep "browser_download_url.*desafiosoftplantWeb" \
   | cut -d ":" -f 2,3 \
   | tr -d \" \
   | wget -qi -
   
-RUN unzip -a calcsoftWeb.zip
-RUN rm calcsoftWeb.zip
+RUN unzip -a desafiosoftplantWeb.zip
+RUN rm desafiosoftplanWeb.zip
 
 FROM node:10-alpine as build
 RUN mkdir /usr/app
