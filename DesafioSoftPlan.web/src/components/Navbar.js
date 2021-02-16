@@ -15,7 +15,7 @@ class Navbar extends Component {
       <AppBar position="static">
         <Toolbar>
           <Typography variant="title" color="inherit">
-            CalcSoft - Calculadora de Juros
+            Desafio SoftPlan - Calculadora de Juros
           </Typography>
         </Toolbar>
       </AppBar>
