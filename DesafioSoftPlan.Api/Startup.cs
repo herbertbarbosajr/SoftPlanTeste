@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using CalcSoft.Api.Interfaces;
-using CalcSoft.Api.Models;
-using CalcSoft.Api.Services;
+using DesafioSoftPlan.Api.Interfaces;
+using DesafioSoftPlan.Api.Models;
+using DesafioSoftPlan.Api.Services;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
@@ -14,7 +14,7 @@ using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 using Swashbuckle.AspNetCore.Swagger;
 
-namespace CalcSoft.Api
+namespace DesafioSoftPlan.Api
 {
     public class Startup
     {
@@ -37,17 +37,17 @@ namespace CalcSoft.Api
 
             services.AddSwaggerGen(s =>
             {
-                s.SwaggerDoc("calcsoftdoc", new Info
+                s.SwaggerDoc("DesafioSoftPlandoc", new Info
                 {
-                    Title = "Calculadora Juros - Teste Softplan",
-                    Description = "Está API e um exemplo de implemntação de uma calculadora de juros, " +
-                        "que serve como teste de implementação em .net para Softplan",
+                    Title = "Desafio para Calcular Juros - Softplan",
+                    Description = "Está API simula a implementação de uma calculadora de juros, " +
+                        "que serve para calcular o valot utilizando .net para Teste Softplan",
                     Version = "v1",
                     Contact = new Contact
                     {
-                        Name = "Paulo Henrique Sousa da Silva",
-                        Email = "paulo.henrique@softplan.com.br",
-                        Url = "https://github.com/pauloofmeta"
+                        Name = "Herbert Barbosa Junior",
+                        Email = "hebertbarbosajr@gmail.com",
+                        Url = "https://github.com/herbertbarbosajr"
                     }
                 });
             });
@@ -64,7 +64,7 @@ namespace CalcSoft.Api
             app.UseSwagger(s => s.RouteTemplate = "doc/{documentName}/doc.json");
             app.UseSwaggerUI(su =>
             {
-                su.SwaggerEndpoint("/doc/calcsoftdoc/doc.json", "Calc Soft V1");
+                su.SwaggerEndpoint("/doc/DesafioSoftPlandoc/doc.json", "Desafio SoftPlan V1");
                 su.RoutePrefix = "doc";
             });
 

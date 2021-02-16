@@ -1,8 +1,8 @@
-﻿using CalcSoft.Api.Helpers;
-using CalcSoft.Api.Interfaces;
+﻿using DesafioSoftPlan.Api.Helpers;
+using DesafioSoftPlan.Api.Interfaces;
 using System;
 
-namespace CalcSoft.Api.Services
+namespace DesafioSoftPlan.Api.Services
 {
     public class JurosService : IJurosService
     {

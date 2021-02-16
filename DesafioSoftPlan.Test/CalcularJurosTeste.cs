@@ -1,11 +1,11 @@
-﻿using CalcSoft.Api.Interfaces;
-using CalcSoft.Api.Services;
+﻿using DesafioSoftPlan.Api.Interfaces;
+using DesafioSoftPlan.Api.Services;
 using System;
 using System.Collections.Generic;
 using System.Text;
 using Xunit;
 
-namespace CalcSoft.Test
+namespace DesafioSoftPlan.Test
 {
     public class CalcularJurosTeste
     {

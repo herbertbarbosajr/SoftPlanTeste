@@ -1,5 +1,5 @@
 ﻿
-namespace CalcSoft.Api.Models
+namespace DesafioSoftPlan.Api.Models
 {
     public class ConfigApp
     {

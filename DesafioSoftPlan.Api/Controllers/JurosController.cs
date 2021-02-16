@@ -2,11 +2,11 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using CalcSoft.Api.Interfaces;
+using DesafioSoftPlan.Api.Interfaces;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
-namespace CalcSoft.Api.Controllers
+namespace DesafioSoftPlan.Api.Controllers
 {
     [Route("[controller]")]
     [ApiController]

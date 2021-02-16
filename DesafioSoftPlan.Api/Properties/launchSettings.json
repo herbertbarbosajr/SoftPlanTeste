@@ -17,7 +17,7 @@
         "ASPNETCORE_ENVIRONMENT": "Development"
       }
     },
-    "CalcSoft.Api": {
+    "DesafioSoftPlan.Api": {
       "commandName": "Project",
       "launchBrowser": false,
       "launchUrl": "doc",

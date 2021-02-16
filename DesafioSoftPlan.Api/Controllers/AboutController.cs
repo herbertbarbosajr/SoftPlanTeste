@@ -1,7 +1,7 @@
-﻿using CalcSoft.Api.Models;
+﻿using DesafioSoftPlan.Api.Models;
 using Microsoft.AspNetCore.Mvc;
 
-namespace CalcSoft.Api.Controllers
+namespace DesafioSoftPlan.Api.Controllers
 {
     [Route("showmethecode")]
     public class AboutController : ControllerBase

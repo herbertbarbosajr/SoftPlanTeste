@@ -1,5 +1,5 @@
 ﻿
-namespace CalcSoft.Api.Interfaces
+namespace DesafioSoftPlan.Api.Interfaces
 {
     public interface IJurosService
     {

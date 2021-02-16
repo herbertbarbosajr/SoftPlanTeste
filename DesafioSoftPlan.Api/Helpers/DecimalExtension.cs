@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace CalcSoft.Api.Helpers
+namespace DesafioSoftPlan.Api.Helpers
 {
     public static class DecimalExtension
     {
