@@ -8,7 +8,7 @@ matrix:
     cache:
       directories:
         - node_modules
-    before_script: cd ./calcsoft.web
+    before_script: cd ./desafiosoftplan.web
     script:
       - npm install
       - npm test

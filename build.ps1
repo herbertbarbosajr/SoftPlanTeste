@@ -219,7 +219,7 @@ if (Test-Path $MODULES_PACKAGES_CONFIG) {
 
     Pop-Location
 }
-
+#desafio SoftPlan
 # Make sure that Cake has been installed.
 if (!(Test-Path $CAKE_EXE)) {
     Throw "Could not find Cake.exe at $CAKE_EXE"
