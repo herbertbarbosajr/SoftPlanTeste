@@ -5,8 +5,9 @@
 /bin
 /.vs
 */obj
-/CalcSoft.Test/bin/
+/DesafioSoftPlan.Test/bin/
 /tools
 /artifacts
 CalcSoft.Api/CalcSoft.Api.csproj.user
 *.zip
+/temp
